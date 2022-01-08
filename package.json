@@ -1,0 +1,17 @@
+{
+  "name": "typescript-to-binary",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Jay Whitewood <jakub.jay.olan@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build:tsc": "tsc -p tsconfig.json",
+    "build:ncc": "yarn build:tsc && ncc build dist/tsc/index.js -a -s -m -o dist/ncc --stats-out dist/ncc/stats.json",
+    "build:pkg": "yarn build:ncc && pkg dist/ncc/index.js -t node16-macos-x64,node16-win-x64 -d --compress Brotli -o dist/pkg/ttb --public-packages \"*\""
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.33.1",
+    "pkg": "^5.5.1",
+    "typescript": "^4.5.4"
+  }
+}
