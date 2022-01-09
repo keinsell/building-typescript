@@ -1,0 +1,47 @@
+version: 2.1
+
+orbs:
+   node: circleci/node@4.7
+   docker: circleci/docker@2.0.0
+
+jobs:
+   build_ncc:
+      executor:
+         name: node/default
+         tag: 16.13.0
+      steps:
+         - checkout
+         - node/install-packages:
+              pkg-manager: yarn
+         - run: yarn build:ncc
+         - store_artifacts:
+            path: ~/project/dist/ncc
+   build_pkg:
+      executor:
+         name: node/default
+         tag: 16.13.0
+      steps:
+         - checkout
+         - node/install-packages:
+              pkg-manager: yarn
+         - run: yarn build:pkg
+         - store_artifacts:
+            path: ~/project/dist/pkg
+   build_tsc:
+      executor:
+         name: node/default
+         tag: 16.13.0
+      steps:
+         - checkout
+         - node/install-packages:
+              pkg-manager: yarn
+         - run: yarn build:tsc
+         - store_artifacts:
+            path: ~/project/dist/pkg
+
+workflows:
+   bleeding:
+      jobs:
+         - build_tsc
+         - build_ncc
+         - build_pkg
