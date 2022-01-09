@@ -4,11 +4,12 @@
   "main": "index.js",
   "author": "Jay Whitewood <jakub.jay.olan@gmail.com>",
   "license": "MIT",
-  "bin": "dist/ncc/index.js",
+  "bin": "dist/tsc/index.js",
   "scripts": {
     "build:tsc": "tsc -p tsconfig.json",
-    "build:ncc": "yarn build:tsc && ncc build dist/tsc/index.js -a -s -m -o dist/ncc --stats-out dist/ncc/stats.json",
-    "build:pkg": "yarn build:ncc && pkg . --compress Brotli -o dist/pkg/ttb --public-packages \"*\""
+    "build:ncc": "ncc build src/index.ts -a -s -m -o dist/ncc --stats-out dist/ncc/stats.json",
+    "build:esb": "esbuild src/index.ts --bundle --minify --sourcemap --platform=node --target=node16 --outfile=dist/esb/index.js",
+    "build:pkg": "pkg . --compress Brotli -o dist/pkg/ttb --public-packages \"*\""
   },
   "pkg": {
     "scripts": "scripts/**/*.js",
@@ -23,6 +24,7 @@
     "@types/node": "^17.0.8",
     "@vercel/ncc": "^0.33.1",
     "electron-builder": "^22.14.5",
+    "esbuild": "^0.14.11",
     "pkg": "^5.5.1",
     "typescript": "^4.5.4"
   },

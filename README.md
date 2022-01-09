@@ -5,12 +5,18 @@ Experimental repository which contains my experiments and ideas of building Type
 - Usage of `@vercel/ncc` to compile TypeScript to JavaScript
 - Usage of `@vercel/pkg` to compile JavaScript into single executable file
 
+## Progress of Repository
+- `esb` and `ncc` compiles dependecies into bundle.
+- `pkg` compiles bundle into single executable file, can be used from `esb`/`ncc` bundle.
+
+
 ## Usage
 
 ```bash
 $ yarn
 $ yarn build:tsc # dist/tsc
 $ yarn build:ncc # dist/ncc
+$ yarn build:esb # dist/esb
 $ yarn build:pkg # dist/pkg
 ```
 
