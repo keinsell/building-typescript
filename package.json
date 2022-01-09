@@ -13,7 +13,9 @@
     "build": "npm run build:tsc && npm run build:ncc && npm run build:esb && npm run build:pkg"
   },
   "pkg": {
-    "scripts": "scripts/**/*.js",
+    "scripts": [
+      "dist/tsc/**/*.js"
+    ],
     "assets": [
       "node_modules/bcrypt/lib/binding/napi-v3/bcrypt_lib.node"
     ],
