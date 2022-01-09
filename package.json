@@ -27,16 +27,16 @@
   },
   "devDependencies": {
     "@types/archiver": "^5",
-    "@types/bcrypt": "^5",
+    "@types/prettier": "^2",
     "@vercel/ncc": "^0.33.1",
     "archiver": "^5.3.0",
     "electron-builder": "^22.14.5",
     "esbuild": "^0.14.11",
     "pkg": "^5.5.1",
+    "prettier": "^2.5.1",
     "typescript": "^4.5.4"
   },
   "dependencies": {
-    "bcrypt": "^5.0.1",
     "consola": "^2.15.3",
     "fastify": "^3.25.3",
     "mongoose": "^6.1.5"
