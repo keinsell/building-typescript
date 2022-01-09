@@ -8,7 +8,7 @@ jobs:
    build_ncc:
       executor:
          name: node/default
-         tag: 17.0.1
+         tag: 16.13.0
       steps:
          - checkout
          - node/install-packages:
@@ -19,7 +19,7 @@ jobs:
    build_pkg:
       executor:
          name: node/default
-         tag: 17.0.1
+         tag: 16.13.0
       steps:
          - checkout
          - node/install-packages:
@@ -30,7 +30,7 @@ jobs:
    build_tsc:
       executor:
          name: node/default
-         tag: 17.0.1
+         tag: 16.13.0
       steps:
          - checkout
          - node/install-packages:
