@@ -14,8 +14,9 @@ jobs:
          - node/install-packages:
               pkg-manager: yarn
          - run: yarn build:ncc
+         - run: node tasks/zippy.js
          - store_artifacts:
-            path: ~/project/dist/ncc
+            path: ~/project/dist/ncc-*.zip
    build_pkg:
       executor:
          name: node/default
