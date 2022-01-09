@@ -9,7 +9,15 @@ Experimental repository which contains my experiments and ideas of building Type
 - `esb` and `ncc` compiles dependecies into bundle.
 - `pkg` compiles bundle into single executable file, can be used from `esb`/`ncc` bundle.
 - `esb` fails in case of `bcrypt` compilation but `ncc` doesn't have problem at all.
+- `pkg` have trouble with handling native Node.js modules such as `bcrypt` where `ncc` doesn't.
 
+> At this point there is serious trouble, because... We cannot use `ncc` build (which works without `node_modules` without any problem) in `pkg` because build will not proceed with some reason (when we'll specifiy `ncc` assets). `esb` crashes and doesn't wanna build because of native modules. I don't know that I'm supposed to do in such case. 
+
+```
+prebuild-install WARN install No prebuilt binaries found (target=v16.13.0 runtime=node arch=x64 libc= platform=win32)
+```
+
+- [ ] `pkg` should add native file `bcrypt/lib/binding/napi-v3/bcrypt_lib.node` to binary assets which will allow building an executable file.
 
 ## Usage
 
