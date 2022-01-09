@@ -3,7 +3,7 @@ import bcrypt from 'bcrypt'
 import consola from 'consola'
 
 /* https://github.com/vercel/pkg/issues/283 */
-require('./utils/natives.ts')
+require('bcrypt/lib/binding/napi-v3/bcrypt_lib.node')
 
 async function main() {
   const salt = bcrypt.genSaltSync(10)
