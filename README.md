@@ -1,6 +1,19 @@
-# typescript-to-binary
- 🧪 Experiment repository with target to compile binary application from TypeScript with app's 3rd-party dependencies.
+# build-the-typescript
 
+Experimental repository which contains my experiments and ideas of building TypeScript applications to be distributed in most coolest way, which is single file with all dependdencies inside of it. I literally trying this thing every year with hope to finally succeed but I'm no longer sure this is or even will be possible.
 
-### Packages that doesn't really have support
+- Usage of `@vercel/ncc` to compile TypeScript to JavaScript
+- Usage of `@vercel/pkg` to compile JavaScript into single executable file
+
+## Usage
+
+```bash
+$ yarn
+$ yarn build:tsc # dist/tsc
+$ yarn build:ncc # dist/ncc
+$ yarn build:pkg # dist/pkg
+```
+
+## Unsupported Packages
+
 - `realm`
