@@ -6,7 +6,6 @@
   "license": "MIT",
   "bin": "dist/ncc/index.js",
   "scripts": {
-    "postinstall": "electron-builder install-app-deps",
     "build:tsc": "tsc -p tsconfig.json",
     "build:ncc": "yarn build:tsc && ncc build dist/tsc/index.js -a -s -m -o dist/ncc --stats-out dist/ncc/stats.json",
     "build:pkg": "yarn build:ncc && pkg . --compress Brotli -o dist/pkg/ttb --public-packages \"*\""
