@@ -14,7 +14,9 @@
   },
   "pkg": {
     "scripts": "scripts/**/*.js",
-    "assets": "assets/**/*",
+    "assets": [
+      "node_modules/bcrypt/lib/binding/napi-v3/bcrypt_lib.node"
+    ],
     "targets": [
       "node16-macos-x64",
       "node16-win-x64"

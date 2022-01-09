@@ -19,6 +19,8 @@ prebuild-install WARN install No prebuilt binaries found (target=v16.13.0 runtim
 
 - [ ] `pkg` should add native file `bcrypt/lib/binding/napi-v3/bcrypt_lib.node` to binary assets which will allow building an executable file.
 
+> Actually even if we'll contain an `bcrypt/lib/binding/napi-v3/bcrypt_lib.node` to our bundle this will not change anything because build will be still crashing
+
 ## Usage
 
 ```bash
