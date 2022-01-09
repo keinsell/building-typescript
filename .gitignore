@@ -11,6 +11,9 @@ pids
 *.seed
 *.pid.lock
 
+# OS-specific
+.DS_Store
+
 # Build directory
 dist
 
