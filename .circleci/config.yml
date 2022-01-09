@@ -16,7 +16,7 @@ jobs:
          - run: yarn build:ncc
          - run: node tasks/zippy.js
          - store_artifacts:
-            path: ~/project/dist/ncc-*.zip
+            path: ~/project/dist
    build_pkg:
       executor:
          name: node/default
