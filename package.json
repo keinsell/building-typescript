@@ -22,6 +22,7 @@
     "outputPath": "dist/pkg"
   },
   "devDependencies": {
+    "@types/bcrypt": "^10.0.28-alpha",
     "@types/node": "^17.0.8",
     "@vercel/ncc": "^0.33.1",
     "electron-builder": "^22.14.5",
@@ -30,7 +31,9 @@
     "typescript": "^4.5.4"
   },
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "consola": "^2.15.3",
-    "fastify": "^3.25.3"
+    "fastify": "^3.25.3",
+    "mongoose": "^6.1.5"
   }
 }

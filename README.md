@@ -8,6 +8,7 @@ Experimental repository which contains my experiments and ideas of building Type
 ## Progress of Repository
 - `esb` and `ncc` compiles dependecies into bundle.
 - `pkg` compiles bundle into single executable file, can be used from `esb`/`ncc` bundle.
+- `esb` fails in case of `bcrypt` compilation but `ncc` doesn't have problem at all.
 
 
 ## Usage
@@ -18,6 +19,7 @@ $ yarn build:tsc # dist/tsc
 $ yarn build:ncc # dist/ncc
 $ yarn build:esb # dist/esb
 $ yarn build:pkg # dist/pkg
+$ yarn build:tsc && yarn build:pkg # dist/pkg
 ```
 
 ## Unsupported Packages
