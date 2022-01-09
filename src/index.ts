@@ -1,4 +1,5 @@
 import Fastify from 'fastify'
+import consola from 'consola'
 
 async function main() {
   const fastify = Fastify()
@@ -10,9 +11,9 @@ async function main() {
   const start = async () => {
     try {
       await fastify.listen(3000)
-      console.log('Application running at http://localhost:3000')
+      consola.success('Application running at http://localhost:3000')
     } catch (err) {
-      fastify.log.error(err)
+      consola.error(err)
       process.exit(1)
     }
   }
