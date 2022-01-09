@@ -12,10 +12,7 @@
   },
   "pkg": {
     "scripts": "scripts/**/*.js",
-    "assets": [
-      "dist/ncc/**/*",
-      "node_modules/**/*"
-    ],
+    "assets": "assets/**/*",
     "targets": [
       "node16-macos-x64",
       "node16-win-x64"
