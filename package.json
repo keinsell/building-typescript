@@ -14,8 +14,8 @@
   "pkg": {
     "scripts": "scripts/**/*.js",
     "assets": [
-      "dist/ncc/build/**/*",
-      "dist/ncc/react-native/**/*"
+      "dist/ncc/**/*",
+      "node_modules/**/*"
     ],
     "targets": [
       "node16-macos-x64",
@@ -31,7 +31,6 @@
     "typescript": "^4.5.4"
   },
   "dependencies": {
-    "fastify": "^3.25.3",
-    "realm": "^10.11.0"
+    "fastify": "^3.25.3"
   }
 }

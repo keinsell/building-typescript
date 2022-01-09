@@ -1,5 +1,4 @@
 import Fastify from 'fastify'
-import { openRealm } from './schema'
 
 async function main() {
   const fastify = Fastify()
@@ -7,8 +6,6 @@ async function main() {
   fastify.get('/', async (request, reply) => {
     return { hello: 'world' }
   })
-
-  openRealm()
 
   const start = async () => {
     try {
