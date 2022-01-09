@@ -1,10 +1,15 @@
 import Fastify from 'fastify'
+import { openRealm } from './schema'
 
 async function main() {
   const fastify = Fastify()
+
   fastify.get('/', async (request, reply) => {
     return { hello: 'world' }
   })
+
+  openRealm()
+
   const start = async () => {
     try {
       await fastify.listen(3000)
