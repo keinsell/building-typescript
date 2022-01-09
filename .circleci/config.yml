@@ -24,6 +24,7 @@ jobs:
          - checkout
          - node/install-packages:
               pkg-manager: yarn
+         - run: yarn build:tsc
          - run: yarn build:pkg
          - store_artifacts:
             path: ~/project/dist/pkg
