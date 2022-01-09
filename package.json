@@ -1,9 +1,9 @@
 {
-  "name": "typescript-to-binary",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "build-the-typescript",
   "author": "Jay Whitewood <jakub.jay.olan@gmail.com>",
-  "license": "MIT",
+  "packageManager": "yarn@3.1.1",
+  "version": "0.0.1",
+  "main": "dist/ncc/index.js",
   "bin": "dist/tsc/index.js",
   "scripts": {
     "build:tsc": "tsc -p tsconfig.json",
@@ -24,8 +24,8 @@
     "outputPath": "dist/pkg"
   },
   "devDependencies": {
-    "@types/bcrypt": "^10.0.28-alpha",
-    "@types/node": "^17.0.8",
+    "@types/archiver": "^5",
+    "@types/bcrypt": "^5",
     "@vercel/ncc": "^0.33.1",
     "archiver": "^5.3.0",
     "electron-builder": "^22.14.5",
