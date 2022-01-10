@@ -1,7 +1,7 @@
-import fs from 'fs'
-import path from 'path'
-import { execSync } from 'child_process'
-import archiver from 'archiver'
+const fs = require('fs')
+const archiver = require('archiver')
+const execSync = require('child_process').execSync
+const path = require('path')
 
 /**
  *
