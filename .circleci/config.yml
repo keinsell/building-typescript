@@ -14,7 +14,7 @@ jobs:
          - node/install-packages:
               pkg-manager: yarn
          - run: yarn build:ncc
-         - run: node tasks/zippy.js
+         - run: node scripts/zippy.js
          - store_artifacts:
             path: ~/project/dist
    build_pkg:

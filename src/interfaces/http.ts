@@ -1,18 +1,29 @@
-import Fastify from 'fastify'
-import consola from "consola";
+import Fastify, { FastifyInstance, FastifyReply, FastifyRequest } from 'fastify'
+import consola from 'consola'
 
-const fastify = Fastify();
+async function helloController(req: FastifyRequest, res: FastifyReply) {
+	consola.info('GET /')
+	res.send({ hello: 'world' })
+}
 
-fastify.get("/", async (request, reply) => {
-  return { hello: "world" };
-});
+export class HTTPInteface {
+	public fastify: FastifyInstance = Fastify()
 
-export const startHttpInterface = async () => {
-  try {
-    await fastify.listen(3000);
-    consola.success("Application running at http://localhost:3000");
-  } catch (err) {
-    consola.error(err);
-    process.exit(1);
-  }
-};
+	constructor() {
+		this.routes()
+	}
+
+	routes() {
+		this.fastify.get('/', helloController)
+	}
+
+	async startup() {
+		try {
+			await this.fastify.listen(3000)
+			consola.success('Application running at http://localhost:3000')
+		} catch (err) {
+			consola.error(err)
+			process.exit(1)
+		}
+	}
+}

@@ -1,13 +1,8 @@
-import { execSync } from "child_process";
-import consola from "consola";
+import { HTTPInteface } from './interfaces/http'
+import bcrypt from 'bcrypt'
 
-import { startHttpInterface } from "./interfaces/http";
+const salt = bcrypt.genSaltSync(5)
+const hash = bcrypt.hashSync('password', salt)
+console.log(hash)
 
-/* https://github.com/vercel/pkg/issues/283 */
-// require('bcrypt/lib/binding/napi-v3/bcrypt_lib.node')
-
-async function main() {
-  startHttpInterface();
-}
-
-main();
+new HTTPInteface().startup()
