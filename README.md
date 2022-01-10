@@ -27,7 +27,6 @@ prebuild-install WARN install No prebuilt binaries found (target=v16.13.0 runtim
 $ yarn
 $ yarn build:tsc # dist/tsc
 $ yarn build:ncc # dist/ncc
-$ yarn build:esb # dist/esb
 $ yarn build:pkg # dist/pkg
 $ yarn build:tsc && yarn build:pkg # dist/pkg
 ```

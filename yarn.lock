@@ -990,6 +990,7 @@ __metadata:
     fastify: ^3.25.3
     input: ^1.0.1
     mongoose: ^6.1.5
+    nexe-natives: ^1.0.2
     node-gyp: ^8.4.1
     ora: ^6.0.1
     pkg: ^5.5.1
@@ -3696,6 +3697,13 @@ __metadata:
   version: 0.6.2
   resolution: "negotiator@npm:0.6.2"
   checksum: dfddaff6c06792f1c4c3809e29a427b8daef8cd437c83b08dd51d7ee11bbd1c29d9512d66b801144d6c98e910ffd8723f2432e0cbf8b18d41d2a09599c975ab3
+  languageName: node
+  linkType: hard
+
+"nexe-natives@npm:^1.0.2":
+  version: 1.0.2
+  resolution: "nexe-natives@npm:1.0.2"
+  checksum: faace37044ee015f587defd6b3c16d89c4d4d62be7446548872efe7ce6070739023de0a8a21ad33bfc1d040bc97ea481af53c52927581b39f7d8422368c5594b
   languageName: node
   linkType: hard
 
