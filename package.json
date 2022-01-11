@@ -7,11 +7,19 @@
 	"main": "dist/ncc/index.js",
 	"bin": "dist/tsc/index.js",
 	"type": "module",
+	"pkg": {
+		"scripts": [
+			"dist/tsc/**"
+		],
+		"assets": [
+			"node_modules/bcrypt/lib/binding/napi-v3/bcrypt_lib.node"
+		]
+	},
 	"scripts": {
 		"dev": "node scripts/dev.js",
 		"build:ncc": "yarn build:tsc && ncc build src/index.ts -a -s -m -o dist/ncc --stats-out dist/ncc/stats.json",
 		"build:tsc": "tsc -p tsconfig.json",
-		"build:pkg": "yarn build:ncc && pkg . --compress Brotli -o dist/pkg/ttb -t latest-macos-x64,latest-win-x64  -d --public-packages \"*\""
+		"build:pkg": "yarn build:ncc && pkg . --no-native-build --compress Brotli -o dist/pkg/ttb -t latest-macos-x64,latest-win-x64 --public-packages \"*\""
 	},
 	"devDependencies": {
 		"@types/archiver": "^5",
@@ -25,7 +33,9 @@
 		"execa": "^6.0.0",
 		"node-gyp": "^8.4.1",
 		"ora": "^6.0.1",
-		"pkg": "^5.5.1",
+		"pkg": "5.2.0",
+		"prebuild-install": "^7.0.0",
+		"prebuildify": "^5.0.0",
 		"prettier": "^2.5.1",
 		"ts-node-dev": "^1.1.8",
 		"typescript": "next"
@@ -35,7 +45,6 @@
 		"consola": "^2.15.3",
 		"fastify": "^3.25.3",
 		"input": "^1.0.1",
-		"mongoose": "^6.1.5",
-		"nexe-natives": "^1.0.2"
+		"mongoose": "^6.1.5"
 	}
 }
