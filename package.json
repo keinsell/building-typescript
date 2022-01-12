@@ -13,9 +13,9 @@
 		"build:ncc": "ncc build src/index.ts -a -s -m -o dist/ncc --stats-out dist/ncc/stats.json",
 		"build:esb": "esbuild src/index.ts --bundle --platform=node --outdir=dist/esb --external:bcrypt",
 		"build:pkg": "yarn build:tsc && pkg dist/tsc/index.js --compress Brotli -o dist/pkg/typecraft -t latest-macos-x64,latest-win-x64,latest-linux-x64 --public-packages \"*\"",
-		"build:osx": "caxa --input \"dist/tsc\" --output \"dist/caxa/typecraft.app\" -- \"{{caxa}}/node_modules/.bin/node\" \"{{caxa}}/index.js\"",
-		"build:win": "caxa --input \"dist/tsc\" --output \"dist/caxa/typecraft.exe\" -- \"{{caxa}}/node_modules/.bin/node\" \"{{caxa}}/index.js\"",
-		"build:unix": "caxa --input \"dist/tsc\" --output \"dist/caxa/typecraft\" -- \"{{caxa}}/node_modules/.bin/node\" \"{{caxa}}/index.js\""
+		"build:osx": "caxa --input \"dist/ncc\" --output \"dist/caxa/typecraft.app\" -- \"{{caxa}}/node_modules/.bin/node\" \"{{caxa}}/index.js\"",
+		"build:win": "caxa --input \"dist/ncc\" --output \"dist/caxa/typecraft.exe\" -- \"{{caxa}}/node_modules/.bin/node\" \"{{caxa}}/index.js\"",
+		"build:unix": "caxa --input \"dist/ncc\" --output \"dist/caxa/typecraft\" -- \"{{caxa}}/node_modules/.bin/node\" \"{{caxa}}/index.js\""
 	},
 	"devDependencies": {
 		"@ava/typescript": "^3.0.1",

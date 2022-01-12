@@ -42,11 +42,11 @@ jobs:
         with:
           node-version: 14.x     
       - run: yarn
-      - run: yarn build:tsc
+      - run: yarn build:ncc
       - run: yarn build:osx
-      # - run: tar -czf "dist/caxa/typecraft.app.tgz" "dist/caxa/typecraft.app"
+      - run: tar -czf "typecraft.app.tgz" "dist/caxa/typecraft.app"
       - name: mac package
         uses: actions/upload-artifact@v2.2.4
         with:
-          name: typecraft-mac-package
+          name: next-typecraft-macos
           path: dist/caxa/typecraft.app
