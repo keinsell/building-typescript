@@ -57,11 +57,31 @@ jobs:
          - run: yarn build:esb
          - store_artifacts:
             path: ~/project/dist/esb
+   test:
+      executor:
+         name: node/default
+         tag: 16.13.0
+      steps:
+         - checkout
+         - node/install-packages:
+              pkg-manager: yarn
+         - run: yarn test
 
 workflows:
+   version: 2
    bleeding:
       jobs:
-         - build_tsc
-         - build_esbuild
-         - build_ncc
-         - build_pkg
+         - test
+         - build_tsc:
+            requires:
+               - test
+         - build_esbuild:
+            requires:
+               - test
+         - build_ncc:
+            requires:
+               - build_esbuild
+               - build_tsc
+         - build_pkg:
+            requires:
+               - build_ncc
