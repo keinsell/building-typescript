@@ -8,10 +8,10 @@
 	"bin": "dist/tsc/index.js",
 	"pkg": {
 		"scripts": [
-			"dist/ncc/**"
+			"dist/ncc/**/*.js"
 		],
 		"assets": [
-			"dist/ncc/**/*.node"
+			"dist/ncc/**/*"
 		]
 	},
 	"scripts": {
