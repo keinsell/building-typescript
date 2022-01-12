@@ -1000,7 +1000,7 @@ __metadata:
     ts-node-dev: ^1.1.8
     typescript: next
   bin:
-    build-the-typescript: dist/tsc/index.js
+    build-the-typescript: dist/ncc/index.js
   languageName: unknown
   linkType: soft
 
