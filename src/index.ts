@@ -3,8 +3,6 @@ import bcrypt from 'bcrypt'
 import realm from 'realm'
 import path from 'path'
 
-require('bcrypt/lib/binding/napi-v3/bcrypt_lib.node')
-
 export interface User extends realm.Object {
 	id: string
 }
@@ -29,6 +27,8 @@ export async function main() {
 		path: path.join(__dirname, 'db', 'db.realm'),
 		schema: [UserSchema],
 	})
+
+	if (!r.isClosed) console.log('Realm connection open!')
 
 	r.close()
 
