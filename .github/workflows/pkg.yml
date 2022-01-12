@@ -49,4 +49,4 @@ jobs:
         uses: actions/upload-artifact@v2.2.4
         with:
           name: next-typecraft-macos
-          path: dist/caxa/typecraft.app
+          path: dist/caxa/typecraft.app.tgz
