@@ -24,7 +24,7 @@
 		"execa": "^6.0.0",
 		"node-gyp": "^8.4.1",
 		"ora": "^6.0.1",
-		"pkg": "5.2.0",
+		"pkg": "5.5.1",
 		"prebuild-install": "^7.0.0",
 		"prebuildify": "^5.0.0",
 		"prettier": "^2.5.1",
