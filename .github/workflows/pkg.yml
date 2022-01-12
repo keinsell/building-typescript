@@ -16,6 +16,7 @@ jobs:
       with:
         node-version: 14.x     
     - run: yarn
+    - run: yarn build:tsc
     - run: yarn build:pkg
     - name: linux package
       uses: actions/upload-artifact@v2.2.4
