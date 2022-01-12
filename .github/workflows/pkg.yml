@@ -44,7 +44,8 @@ jobs:
       - run: yarn
       - run: yarn build:ncc
       - run: yarn build:osx
-      - run: tar -czf "typecraft.app.tgz" "dist/caxa/typecraft.app"
+      - run: cd dist/caxa \
+          tar -czf "typecraft.app.tgz" "typecraft.app"
       - name: mac package
         uses: actions/upload-artifact@v2.2.4
         with:
