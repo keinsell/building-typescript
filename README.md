@@ -4,7 +4,7 @@ Experimental repository which contains my experiments and ideas of building Type
 
 - Usage of `typescript@next` to compile TypeScript code into ES2015 JavaScript
 - Usage of `@vercel/ncc` to compile transpiled JavaScript (by `tsc`) into bundled JavaScript. 
-- Usage of `@vercel/pkg` to compile JavaScript into single executable file
+- Usage of `@vercel/pkg` to compile JavaScript (transpiled by `tsc`) into single executable file
 
 ## Usage
 
