@@ -1,0 +1,35 @@
+name: pkg
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js 14
+      uses: actions/setup-node@v2
+      with:
+        node-version: 14.x
+        cache: 'yarn'        
+    - run: yarn
+    - run: yarn build:pkg
+    - name: linux package
+      uses: actions/upload-artifact@v2.2.4
+      with:
+        name: typecraft-linux
+        path: dist/pkg/typecraft-linux
+    - name: mac package
+      uses: actions/upload-artifact@v2.2.4
+      with:
+        name: typecraft-macos
+        path: dist/pkg/typecraft-macos
+    - name: win package
+      uses: actions/upload-artifact@v2.2.4
+      with:
+        name: typecraft-win
+        path: dist/pkg/typecraft-win
