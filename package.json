@@ -8,10 +8,10 @@
 	"bin": "dist/tsc/index.js",
 	"pkg": {
 		"scripts": [
-			"dist/tsc/**"
+			"dist/ncc/**"
 		],
 		"assets": [
-			"node_modules/bcrypt/lib/binding/napi-v3/bcrypt_lib.node"
+			"dist/ncc/**/*.node"
 		]
 	},
 	"scripts": {
