@@ -55,8 +55,9 @@ jobs:
          - node/install-packages:
               pkg-manager: yarn
          - run: yarn build:esb
+         - run: cd dist/esb && tar -czvf ~/project/esbuild.tar.gz .
          - store_artifacts:
-            path: ~/project/dist/esb
+            path: ~/project/esbuild.tar.gz
    test:
       executor:
          name: node/default
