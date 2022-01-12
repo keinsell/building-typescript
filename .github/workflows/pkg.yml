@@ -33,3 +33,18 @@ jobs:
       with:
         name: typecraft-win
         path: dist/pkg/typecraft-win.exe
+  build_macos:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js 14
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14.x     
+      - run: yarn
+      - run: npx caxa --input \"dist/tsc\" --output \"dist/caxa/typecraft.app\" -- \"{{caxa}}/node_modules/.bin/node\" \"{{caxa}}/index.js\"
+      - name: mac package
+        uses: actions/upload-artifact@v2.2.4
+        with:
+          name: typecraft.app
+          path: dist/caxa/typecraft.app
