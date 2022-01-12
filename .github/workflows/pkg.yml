@@ -7,32 +7,32 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js 14
-      uses: actions/setup-node@v2
-      with:
-        node-version: 14.x     
-    - run: yarn
-    - run: yarn build:tsc
-    - run: yarn build:pkg
-    - name: linux package
-      uses: actions/upload-artifact@v2.2.4
-      with:
-        name: typecraft-linux
-        path: dist/pkg/typecraft-linux
-    - name: mac package
-      uses: actions/upload-artifact@v2.2.4
-      with:
-        name: typecraft-macos
-        path: dist/pkg/typecraft-macos
-    - name: win package
-      uses: actions/upload-artifact@v2.2.4
-      with:
-        name: typecraft-win
-        path: dist/pkg/typecraft-win.exe
+  # build:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #   - uses: actions/checkout@v2
+  #   - name: Use Node.js 14
+  #     uses: actions/setup-node@v2
+  #     with:
+  #       node-version: 14.x     
+  #   - run: yarn
+  #   - run: yarn build:tsc
+  #   - run: yarn build:pkg
+  #   - name: Upload Linux Package
+  #     uses: actions/upload-artifact@v2.2.4
+  #     with:
+  #       name: pkg-linux
+  #       path: dist/pkg/typecraft-linux
+  #   - name: Upload MacOS Package
+  #     uses: actions/upload-artifact@v2.2.4
+  #     with:
+  #       name: pkg-macos
+  #       path: dist/pkg/typecraft-macos
+  #   - name: Upload Windows Package
+  #     uses: actions/upload-artifact@v2.2.4
+  #     with:
+  #       name: pkg-windows
+  #       path: dist/pkg/typecraft-win.exe
   build_macos:
     runs-on: macos-latest
     steps:
@@ -45,8 +45,25 @@ jobs:
       - run: yarn build:ncc
       - run: yarn build:osx
       - run: cd dist/caxa && tar -czvf typecraft.tar.gz .
-      - name: mac package
+      - name: Upload MacOS Package
         uses: actions/upload-artifact@v2.2.4
         with:
-          name: caxa-typecraft-macos
+          name: caxa-macos
           path: dist/caxa/typecraft.tar.gz
+  build_windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js 14
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14.x     
+      - run: yarn
+      - run: yarn build:ncc
+      - run: yarn build:win
+      # - run: cd dist/caxa && tar -czvf typecraft.tar.gz .
+      - name: Upload Windows Package
+        uses: actions/upload-artifact@v2.2.4
+        with:
+          name: caxa-windows
+          path: dist/caxa/typecraft.exe
