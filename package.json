@@ -44,7 +44,8 @@
 		"consola": "^2.15.3",
 		"fastify": "^3.25.3",
 		"input": "^1.0.1",
-		"mongoose": "^6.1.5"
+		"mongoose": "^6.1.5",
+		"realm": "^10.11.0"
 	},
 	"ava": {
 		"extensions": [
