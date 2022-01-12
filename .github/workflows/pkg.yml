@@ -43,7 +43,7 @@ jobs:
           node-version: 14.x     
       - run: yarn
       - run: yarn build:tsc
-      - run: npx caxa --input \"dist/tsc\" --output \"dist/caxa/typecraft.app\" -- \"{{caxa}}/node_modules/.bin/node\" \"{{caxa}}/index.js\"
+      - run: yarn build:osx
       - name: mac package
         uses: actions/upload-artifact@v2.2.4
         with:
