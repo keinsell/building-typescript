@@ -6,19 +6,11 @@
 	"version": "0.0.1",
 	"main": "dist/ncc/index.js",
 	"bin": "dist/ncc/index.js",
-	"pkg": {
-		"scripts": [
-			"dist/ncc/**/*.js"
-		],
-		"assets": [
-			"dist/ncc/**/*"
-		]
-	},
 	"scripts": {
 		"dev": "node scripts/dev.js",
-		"build:ncc": "yarn build:tsc && ncc build dist/tsc/index.js -a -s -m -o dist/ncc --stats-out dist/ncc/stats.json",
 		"build:tsc": "tsc -p tsconfig.json",
-		"build:pkg": "yarn build:ncc && pkg . --compress Brotli -o dist/pkg/typecraft -t latest-macos-x64,latest-win-x64,latest-linux-x64 --public-packages \"*\""
+		"build:ncc": "ncc build src/index.ts -a -s -m -o dist/ncc --stats-out dist/ncc/stats.json",
+		"build:pkg": "yarn build:tsc && pkg dist/tsc/index.js --compress Brotli -o dist/pkg/typecraft -t latest-macos-x64,latest-win-x64,latest-linux-x64 --public-packages \"*\""
 	},
 	"devDependencies": {
 		"@types/archiver": "^5",
