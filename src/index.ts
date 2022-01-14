@@ -1,18 +1,14 @@
-import { HTTPInteface } from './interfaces/http'
-
 import { hash } from './builds/bcrypt'
+import { slite } from './builds/sqlite'
 // import { relmio } from './builds/realm'
 
-/* Explict require of .node binary
-https://github.com/vercel/pkg/issues/1473 */
-
+/* I cannot into pkg.assets configuration */
 require('bcrypt/lib/binding/napi-v3/bcrypt_lib.node')
-// require('realm/lib/submit-analytics.js')
+require('sqlite3/lib/binding/napi-v3-darwin-x64/node_sqlite3.node')
 
 export async function main() {
 	hash('password')
-	// relmio()
-	// new HTTPInteface().startup()
+	slite()
 }
 
 main()

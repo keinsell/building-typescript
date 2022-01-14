@@ -90,3 +90,4 @@ typings/
 # FuseBox cache
 .fusebox/
 .yarn/cache/caxa-npm-2.1.0-0cbd6bd111-138fcb0738.zip
+src/builds/database.db
