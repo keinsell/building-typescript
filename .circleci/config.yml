@@ -32,9 +32,6 @@ jobs:
          - run: yarn build:pkg
          - store_artifacts:
             path: ~/project/dist/pkg
-         - run: ./dist/pkg/typecraft-linux
-         - run: rm -rf node_modules
-         - run: ./dist/pkg/typecraft-linux
    build_tsc:
       executor:
          name: node/default
