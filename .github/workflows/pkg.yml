@@ -7,32 +7,7 @@ on:
     branches: [ main ]
 
 jobs:
-  # build:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #   - uses: actions/checkout@v2
-  #   - name: Use Node.js 14
-  #     uses: actions/setup-node@v2
-  #     with:
-  #       node-version: 14.x     
-  #   - run: yarn
-  #   - run: yarn build:tsc
-  #   - run: yarn build:pkg
-  #   - name: Upload Linux Package
-  #     uses: actions/upload-artifact@v2.2.4
-  #     with:
-  #       name: pkg-linux
-  #       path: dist/pkg/typecraft-linux
-  #   - name: Upload MacOS Package
-  #     uses: actions/upload-artifact@v2.2.4
-  #     with:
-  #       name: pkg-macos
-  #       path: dist/pkg/typecraft-macos
-  #   - name: Upload Windows Package
-  #     uses: actions/upload-artifact@v2.2.4
-  #     with:
-  #       name: pkg-windows
-  #       path: dist/pkg/typecraft-win.exe
+
   build_macos:
     runs-on: macos-latest
     steps:
@@ -42,14 +17,21 @@ jobs:
         with:
           node-version: 14.x     
       - run: yarn
+      - run: yarn build:tsc
       - run: yarn build:ncc
       - run: yarn build:osx
-      - run: cd dist/caxa && tar -czvf typecraft.tar.gz .
+      - run: yarn build:pkg
       - name: Upload MacOS Package
         uses: actions/upload-artifact@v2.2.4
         with:
           name: caxa-macos
-          path: dist/caxa/typecraft.tar.gz
+          path: dist/caxa/typecraft.app
+      - name: Upload MacOS Package
+        uses: actions/upload-artifact@v2.2.4
+        with:
+          name: pkg-macos
+          path: dist/pkg/typecraft-macos
+
   build_windows:
     runs-on: windows-latest
     steps:
@@ -59,15 +41,15 @@ jobs:
         with:
           node-version: 14.x     
       - run: yarn
+      - run: yarn build:tsc
       - run: yarn build:ncc
       - run: yarn build:win
-      # - run: cd dist/caxa && tar -czvf typecraft.tar.gz .
+      - run: yarn build:pkg
       - name: Upload Windows Package
         uses: actions/upload-artifact@v2.2.4
         with:
           name: caxa-windows
           path: dist/caxa/typecraft.exe
-      - run: yarn build:pkg
       # - run: cd dist/caxa && tar -czvf typecraft.tar.gz .
       - name: Upload Windows Package
         uses: actions/upload-artifact@v2.2.4

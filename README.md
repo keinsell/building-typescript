@@ -30,6 +30,4 @@ There was some mess with native packages but I think with flow of time I'll find
 
 | Supported 	| Untested 	| Unsupported 	|
 |:---------:	|:--------:	|:-----------:	|
-|`bcrypt`       |          	| [`realm`](https://github.com/keinsell/typecraft/issues/6)          	|
-|           	|          	|             	|
-|           	|          	|             	|
+|`bcrypt`       |`sqlite` `aws-sdk` | [`realm`](https://github.com/keinsell/typecraft/issues/6)          	|
