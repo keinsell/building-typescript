@@ -17,4 +17,5 @@ $ yarn build:pkg # dist/pkg (depends on dist/tsc)
 
 ## Native Packages
 
-During my hustle with `node_modules` I finally made `bcrypt` to work well, but `realm` which was my secondary focus still doesn't work and it seems it's almost impossible to be fixed because `ncc` doesn't want to compile it at all.
+**Supported & tested packages**: `bcrypt`
+**Broken packages**: [`realm`](https://github.com/keinsell/typecraft/issues/6)
