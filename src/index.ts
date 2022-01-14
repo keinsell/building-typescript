@@ -4,7 +4,7 @@ import { slite } from './builds/sqlite'
 
 /* I cannot into pkg.assets configuration */
 require('bcrypt/lib/binding/napi-v3/bcrypt_lib.node')
-require('sqlite3/lib/binding/napi-v3-darwin-x64/node_sqlite3.node')
+require('sqlite3/lib/binding/**/node_sqlite3.node')
 
 export async function main() {
 	hash('password')
