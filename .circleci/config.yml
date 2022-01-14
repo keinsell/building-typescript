@@ -81,7 +81,7 @@ workflows:
          #       - test
          - build_ncc:
             requires:
-               - build_esbuild
+         #      - build_esbuild
                - build_tsc
          - build_pkg:
             requires:
