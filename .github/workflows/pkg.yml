@@ -67,3 +67,10 @@ jobs:
         with:
           name: caxa-windows
           path: dist/caxa/typecraft.exe
+      - run: yarn build:pkg
+      # - run: cd dist/caxa && tar -czvf typecraft.tar.gz .
+      - name: Upload Windows Package
+        uses: actions/upload-artifact@v2.2.4
+        with:
+          name: pkg-windows
+          path: dist/pkg/typecraft-win.exe
