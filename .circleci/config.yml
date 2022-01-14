@@ -76,9 +76,9 @@ workflows:
          - build_tsc:
             requires:
                - test
-         - build_esbuild:
-            requires:
-               - test
+         # - build_esbuild:
+         #    requires:
+         #       - test
          - build_ncc:
             requires:
                - build_esbuild
