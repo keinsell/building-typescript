@@ -1222,41 +1222,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"build-the-typescript@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "build-the-typescript@workspace:."
-  dependencies:
-    "@ava/typescript": ^3.0.1
-    "@types/archiver": ^5
-    "@types/bcrypt": ^5
-    "@types/prettier": ^2
-    "@vercel/ncc": ^0.33.1
-    archiver: ^5.3.0
-    ava: ^4.0.1
-    bcrypt: ^5.0.1
-    caxa: ^2.1.0
-    consola: ^2.15.3
-    electron: ^16.0.6
-    electron-builder: ^22.14.5
-    esbuild: ^0.14.11
-    execa: ^6.0.0
-    fastify: ^3.25.3
-    input: ^1.0.1
-    mongoose: ^6.1.5
-    node-gyp: ^8.4.1
-    ora: ^6.0.1
-    pkg: 5.5.1
-    prebuild-install: ^7.0.0
-    prebuildify: ^5.0.0
-    prettier: ^2.5.1
-    realm: ^10.11.0
-    ts-node-dev: ^1.1.8
-    typescript: next
-  bin:
-    build-the-typescript: dist/ncc/index.js
-  languageName: unknown
-  linkType: soft
-
 "builder-util-runtime@npm:8.9.2":
   version: 8.9.2
   resolution: "builder-util-runtime@npm:8.9.2"
@@ -6839,6 +6804,41 @@ __metadata:
   checksum: d61c4b2eba24009033ae4500d7d818a94fd6d1b481a8111612ee141400d5f1db46f199c014766b9fa9b31a6a7374d96fc748c6d688a78a3ce5a33123839becb7
   languageName: node
   linkType: hard
+
+"typecraft@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "typecraft@workspace:."
+  dependencies:
+    "@ava/typescript": ^3.0.1
+    "@types/archiver": ^5
+    "@types/bcrypt": ^5
+    "@types/prettier": ^2
+    "@vercel/ncc": ^0.33.1
+    archiver: ^5.3.0
+    ava: ^4.0.1
+    bcrypt: ^5.0.1
+    caxa: ^2.1.0
+    consola: ^2.15.3
+    electron: ^16.0.6
+    electron-builder: ^22.14.5
+    esbuild: ^0.14.11
+    execa: ^6.0.0
+    fastify: ^3.25.3
+    input: ^1.0.1
+    mongoose: ^6.1.5
+    node-gyp: ^8.4.1
+    ora: ^6.0.1
+    pkg: 5.5.1
+    prebuild-install: ^7.0.0
+    prebuildify: ^5.0.0
+    prettier: ^2.5.1
+    realm: ^10.11.0
+    ts-node-dev: ^1.1.8
+    typescript: next
+  bin:
+    typecraft: dist/ncc/index.js
+  languageName: unknown
+  linkType: soft
 
 "typedarray-to-buffer@npm:^3.1.5":
   version: 3.1.5
