@@ -6,7 +6,7 @@ import { hash } from './builds/bcrypt'
 export async function main() {
 	hash('password')
 	// relmio()
-	new HTTPInteface().startup()
+	// new HTTPInteface().startup()
 }
 
 main()
