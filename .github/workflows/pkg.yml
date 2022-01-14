@@ -21,11 +21,12 @@ jobs:
       - run: yarn build:ncc
       - run: yarn build:osx
       - run: yarn build:pkg
+      - run: cd dist/caxa && tar -czvf typecraft.tar.gz . && cd ../..
       - name: Upload MacOS Package
         uses: actions/upload-artifact@v2.2.4
         with:
           name: caxa-macos
-          path: dist/caxa/typecraft.app
+          path: dist/caxa/typecraft.tar.gz
       - name: Upload MacOS Package
         uses: actions/upload-artifact@v2.2.4
         with:
@@ -50,7 +51,6 @@ jobs:
         with:
           name: caxa-windows
           path: dist/caxa/typecraft.exe
-      # - run: cd dist/caxa && tar -czvf typecraft.tar.gz .
       - name: Upload Windows Package
         uses: actions/upload-artifact@v2.2.4
         with:
