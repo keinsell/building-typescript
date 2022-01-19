@@ -1,5 +1,5 @@
 import { hash } from './builds/bcrypt'
-// import { slite } from './builds/sqlite'
+import { slite } from './builds/sqlite'
 // import { relmio } from './builds/realm'
 
 /* I cannot into pkg.assets configuration */
@@ -8,7 +8,7 @@ import { hash } from './builds/bcrypt'
 
 export async function main() {
 	hash('password')
-	// slite()
+	slite()
 }
 
 main()
