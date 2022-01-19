@@ -4,7 +4,8 @@ import path from 'path'
 
 export async function slite() {
 	const database = await open({
-		filename: path.resolve(__dirname, 'database.db'),
+		// filename: path.resolve(__dirname, 'database.db'),
+		filename: '/typecraft.db',
 		driver: sqlite.Database,
 	})
 	return database
