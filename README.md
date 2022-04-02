@@ -13,12 +13,22 @@ about CommonJS which is like... 70% of actual software in Node.js). And by all t
 considered as leagacy. If Node.js will somehow drop CommonJS and switch to ESM on Nightly releases it would be sad to be not prepared for such thing - so I've
 decided here to compare actual builders and find optimal way of migrating packages from CommonJS to ESM.
 
-## Purpose of repository
+## Edition 2022
 
-When my experiments will be completed and I'll have enough research on building such packages on node, this repository will likely become monorepository that
-will hold univeral boilerplate for every Node.js back-end project with configured CI pipelines and code quality tools.
+### Package Managers
 
-## Tools of repository
+-  I've started using `yarn@3` even if it's pain in my ass because nobody really supports it and most people uses `yarn@1/2` which crashes on `yarn.lock`, so
+   yeah. But it's slowly rising popularity so we're on good road in my opinion.
+-  `pnpm` also seem to rise popularity, especially within `Pure ESM` packages.
+
+### Build Tools
+
+Let's resume all of the build tools we know and have for Node.js (because front-end have literally millions of them and none working properly) - `ncc`,
+`tsc/typescript`, `esbuild`, `webpack?`, `swc`.
+
+### Strongly Typed JavaScript
+
+-  Still `typescript`.
 
 #### `typescript@next`
 
