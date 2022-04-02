@@ -13,6 +13,9 @@ about CommonJS which is like... 70% of actual software in Node.js). And by all t
 considered as leagacy. If Node.js will somehow drop CommonJS and switch to ESM on Nightly releases it would be sad to be not prepared for such thing - so I've
 decided here to compare actual builders and find optimal way of migrating packages from CommonJS to ESM.
 
+**My actual conclusion is following: ESM aren't really able to be even used yet, because: A lot of packages are still CommonJS and when you're converting to ESM
+you're using minority of packages with cost of lossing access to majority of packages where previous minority can be accessed by downgrading version**.
+
 ## Edition 2022
 
 ### Package Managers
