@@ -29,6 +29,12 @@ you're using minority of packages with cost of lossing access to majority of pac
 Let's resume all of the build tools we know and have for Node.js (because front-end have literally millions of them and none working properly) - `ncc`,
 `tsc/typescript`, `esbuild`, `webpack?`, `swc`.
 
+### Runtime
+
+- `node`
+- `deno`
+- [`bun`](https://bun.sh/)
+
 ### Strongly Typed JavaScript
 
 -  Still `typescript`.
