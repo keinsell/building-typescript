@@ -1,0 +1,11 @@
+{
+	"name": "@cc/esbuild",
+	"version": "1.0.0",
+	"main": "index.js",
+	"type": "module",
+	"license": "MIT",
+	"dependencies": {
+		"@cc/application": "*",
+		"@tinyhttp/logger": "latest"
+	}
+}
