@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "wallabyjs.quokka-vscode",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "wallabyjs.wallaby-vscode",
+    "gabrielgrinberg.auto-run-command",
+    "mutantdino.resourcemonitor",
+    "prisma.prisma-insider",
+    "eg2.vscode-npm-script"
+  ]
+}

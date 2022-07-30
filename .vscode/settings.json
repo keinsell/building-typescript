@@ -1,3 +1,35 @@
 {
-    "typescript.tsdk": "node_modules/typescript/lib"
+  "eslint.enable": true,
+  "typescript.preferences.importModuleSpecifierEnding": "js",
+  "typescript.preferences.importModuleSpecifier": "project-relative",
+  "javascript.preferences.importModuleSpecifier": "project-relative",
+  "javascript.preferences.importModuleSpecifierEnding": "js",
+  "jshint.enable": true,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "quokka.automaticRestart": true,
+  "quokka.automaticStartRegex": "notebook.ts",
+  "quokka.suppressExpirationNotifications": true,
+  "quokka.showValueOnMultilineSelection": true,
+  "quokka.compactMessageOutput": true,
+  "eslint.packageManager": "yarn",
+  "eslint.workingDirectories": ["services/server"],
+  "prettier.semi": false,
+  "wallaby.alwaysOpenLocalWallabyAppUrl": true,
+  "wallaby.codeLensFeature.runTest": true,
+  "wallaby.compactMessageOutput": true,
+  "wallaby.suppressExpirationNotifications": true,
+  "wallaby.startAutomatically": true,
+  "prisma.fileWatcher": true,
+  "conventionalCommits.scopes": [
+    "substance",
+    "metric",
+    "user",
+    "experience",
+    "ingestion",
+    "journal",
+    "preset",
+    "stack",
+    "stash"
+  ]
 }
