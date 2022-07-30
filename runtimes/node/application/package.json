@@ -1,11 +1,14 @@
 {
-	"name": "@cc/application",
-	"version": "1.0.0",
-	"main": "index.js",
-	"type": "module",
-	"license": "MIT",
-	"dependencies": {
-		"@tinyhttp/app": "^2.0.22",
-		"@tinyhttp/logger": "latest"
-	}
+  "name": "@cc/application",
+  "version": "1.0.0",
+  "license": "MIT",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node bin.js"
+  },
+  "dependencies": {
+    "@tinyhttp/app": "^2.0.22",
+    "@tinyhttp/logger": "latest"
+  }
 }

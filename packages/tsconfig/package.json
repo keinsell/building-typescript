@@ -1,0 +1,17 @@
+{
+  "name": "tsconfig",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "license": "ISC",
+  "author": "",
+  "main": "code-safety-guideline.json",
+  "files": [
+    "node.json",
+    "module.json",
+    "cjs.json"
+  ],
+  "dependencies": {
+    "typescript": "4.8.0-dev.20220729"
+  }
+}
