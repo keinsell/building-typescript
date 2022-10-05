@@ -30,7 +30,7 @@
 		"electron-builder": "22.14.13",
 		"esbuild": "0.14.51",
 		"execa": "6.1.0",
-		"node-gyp": "8.4.1",
+		"node-gyp": "9.2.0",
 		"ora": "6.1.2",
 		"pkg": "5.5.1",
 		"prebuild-install": "7.1.1",
