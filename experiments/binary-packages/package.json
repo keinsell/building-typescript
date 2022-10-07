@@ -27,7 +27,7 @@
 		"ava": "4.3.1",
 		"caxa": "2.1.0",
 		"electron": "16.2.8",
-		"electron-builder": "22.14.13",
+		"electron-builder": "23.6.0",
 		"esbuild": "0.14.51",
 		"execa": "6.1.0",
 		"node-gyp": "9.2.0",
