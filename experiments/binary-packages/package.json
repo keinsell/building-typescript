@@ -24,7 +24,7 @@
 		"@types/prettier": "2.6.4",
 		"@vercel/ncc": "0.33.4",
 		"archiver": "5.3.1",
-		"ava": "4.3.1",
+		"ava": "4.3.3",
 		"caxa": "2.1.0",
 		"electron": "16.2.8",
 		"electron-builder": "23.6.0",
