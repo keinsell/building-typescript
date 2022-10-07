@@ -34,7 +34,7 @@
 		"ora": "6.1.2",
 		"pkg": "5.5.1",
 		"prebuild-install": "7.1.1",
-		"prebuildify": "5.0.0",
+		"prebuildify": "5.0.1",
 		"prettier": "2.7.1",
 		"ts-node-dev": "1.1.8",
 		"typescript": "next"
