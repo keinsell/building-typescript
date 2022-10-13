@@ -47,7 +47,7 @@
 # EXPOSE 3000
 # CMD [ "./ttb" ]
 
-FROM node:16.13.0
+FROM node:16.18.0
 
 COPY dist/ncc .
 
