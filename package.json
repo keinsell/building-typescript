@@ -39,7 +39,7 @@
     "rome": "next",
     "tsx": "3.8.0",
     "turbo": "latest",
-    "typescript": "4.8.0-dev.20220729"
+    "typescript": "4.9.5"
   },
   "engines": {
     "node": ">=14.0.0"
