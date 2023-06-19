@@ -12,6 +12,6 @@
     "cjs.json"
   ],
   "dependencies": {
-    "typescript": "4.8.0-dev.20220729"
+    "typescript": "4.9.5"
   }
 }
